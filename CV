@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+<script>
+
+let name = "Ali haider"
+let summary = "Software Engineer with 3 months focused on supporting large-scale software systems. Excellent experience in analysis, design, development, testing, and implementation of various internet-based applications. Expert in a variety of platforms, languages. Adept at going beyond that of a developer to that of a user advocate, designer, developer, and tester. Supportive and enthusiastic team player dedicated to streamlining processes and efficiently resolving project issues."
+let education1 = "BSCS in Computer Science from SMIU"
+let education2 = "Intermediate in pre-engineering from NCR-CET"
+let education3 = "Matriculation from St.Pauls English High School"
+let skill1 = "Laravel"
+let skill2 = "Jquery"
+let skill3 = "Codeignitor"
+let experience = "3 months Experience in Webpedia Technologies"
+
+
+
+console.log(name);
+console.log("");
+console.log("Summay:-");
+console.log(summary);
+console.log("");
+console.log("Eduction:-");
+console.log(education1);
+console.log(education2);
+console.log(education3);
+console.log("");
+console.log("Skills:-");
+console.log(skill1);
+console.log(skill2);
+console.log(skill3);
+console.log("");
+console.log("Experience:-");
+console.log(experience);
+
+</script>
+
+
+</body>
+</html>
