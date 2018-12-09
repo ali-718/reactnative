@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    
+<script>
+
+    var a = 10;
+    var b = 20;
+    var name = "ali haider";
+    var pass = "ali123";
+
+    if (a == b) {
+        console.log("yes");
+    }
+    else
+    {
+        console.log('no');
+    }
+
+
+    if (a > 5) {
+        console.log("condition is true");
+    }
+    else
+    {
+        console.log("Condition is false");
+    }
+
+    
+    if (b < 20) {
+        console.log("condition is true");
+    }
+    else
+    {
+        console.log("Condition is false");
+    }
+
+    if ((a > 5) && (b < 20)) {
+        console.log("condition is true");
+    }
+    else
+    {
+        console.log("Condition is false");
+    }
+
+
+    if ((name == "ali haider") && (pass == "ali123")) {
+        console.log("Yes you are Ali haider");
+    }
+    else
+    {
+        console.log("No you are not Ali haider");
+    }
+
+if (name == "ali haider") {
+    console.log("Access granted");
+    
+} else {
+    console.log("Acess Denied");
+}
+
+</script>
+
+</body>
+</html>
