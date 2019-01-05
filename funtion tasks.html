@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <script>
+    //Task 1
+function code() {    
+    console.log('this block of code can be used anywhere.');
+}
+
+    //Task 2
+function DateandTime() {
+    console.log("Today date and time "+DateandTime());
+}    
+
+    //Task 3
+function greet(fname,lname) {
+    console.log("Hello Mr."+fname+" "+lname+" you are welcome");
+}
+
+    //Task 4
+function addition(num1,num2) {
+    return num1+num2;
+}    
+
+    //Task 5
+    function operation(num1,num2,op) {
+    if (op == "+") {
+       return num1 + num2;
+       break;
+    }
+    if (op == "-") {
+       return num1 - num2;
+       break;
+    }
+    if (op == "/") {
+       return num1 / num2;
+       break;
+    }
+    if (op == "*") {
+       return num1 * num2;
+       break;
+    }
+}    
+
+    //Task 6
+function square(num) {
+    return num*num;
+}    
+
+    //Task 7
+function factorial(num) {
+    var c,fact = 1;
+
+    for (let c = 0; c <= num; c++) {
+        fact = fact * c;
+    }
+    return fact;
+}    
+
+    //Task 8
+function counting(start,end) {
+    
+    for (var start; start <= end; start++) {
+     console.log(start);
+    }
+}    
+
+    //Task 9
+function hypotneuse(base,perpendicular) {
+    
+    base = base*base;
+    perpendicular = perpendicular*perpendicular;
+
+    function calculateHypotneuse() {
+        var hypotneuse = base + perpendicular;
+        console.log("this is hypotneuse = "+hypotneuse);
+    }
+
+    function calculatesquare() {
+        console.log(hypotneuse*hypotneuse);
+    }
+
+    calculateHypotneuse();
+    calculatesquare();
+}
+
+    //Task 10
+    function counting() {
+    var s = [];
+    var a = [];
+    for (let i = 0; i < arguments.length; i++) {
+        s.push([arguments[i]]);
+    }
+    return s;
+}
+
+    //Task 11
+function largest() {
+    var s = [];
+    var a = [];
+    for (let i = 0; i < arguments.length; i++) {
+        s.push([arguments[i]]);
+    }
+    return s;
+}
+
+    //Task 12
+function trianglesquare(width,height) {
+    var A = width * height;
+    return A;
+}
+
+    //Task 13
+function sortarray(){
+    var s = [];
+    for (let i = 0; i < arguments.length; i++) {
+        s.push(arguments[i]);     
+    }
+    return s.sort();
+}
+ 
+     //Task 14
+function sortarray(){
+    var s = [];
+    for (let i = 0; i < arguments.length; i++) {
+        s =+ arguments[i];     
+    }
+    return s;
+}
+
+    //Task 15
+var param = function inner() {
+    return typeof(inner); 
+}
+
+    //Task 16
+function numbersquare(num) {
+    return num*num;
+}
+
+    //Task 17
+function dice() {
+   var a = [1];
+   var b = [1,2];
+   var c = [1,2,3];
+   var d = [1,2,3,4];
+   var e = [1,2,3,4,5];
+   var f = [1,2,3,4,5,6];
+
+    var dice = [a,b,c,d,e,f];
+
+    return dice;
+}
+
+    //Task 18
+function numberreverse(num) {
+    num = num + "";
+    return num.split("").reverse().join();
+}
+
+    //Task 19
+function upper(str){
+    var array1 = str.split(' ');
+  var newarray1 = [];
+    
+  for(var x = 0; x < array1.length; x++){
+      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+  }
+  return newarray1.join(' ');
+}
+
+    //Task 20
+function longest(str) {
+    
+    var str = str.split(" ");
+    var list = 0;
+    for (let i = 0; i < str.length; i++) {
+        if(str[i].length > list)
+        {
+            list =+ str[i].length;
+        }
+    }
+    return list;
+}
+
+    //Task 21
+function vowelsfinder(str) {
+    var vowelsCount = 0;
+
+var string = str.toString();
+
+for (var i = 0; i <= string.length - 1; i++) {
+  if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+    vowelsCount += 1;
+  }
+}
+return vowelsCount;
+}
+
+    //Task 22
+function typefinder(input) {
+    return typeof(input);
+}
+
+    //Task 23
+    function unique_char(str1)
+{
+ var str=str1;
+ var uniql="";
+ for (var x=0;x < str.length;x++)
+ {
+
+ if(uniql.indexOf(str.charAt(x))==-1)
+  {
+  uniql += str[x];  
+  
+   }
+  }
+  return uniql;  
+}  
+
+    //Task 24
+    function char_count(str, letter) 
+{
+ var letter_Count = 0;
+ for (var position = 0; position < str.length; position++) 
+ {
+    if (str.charAt(position) == letter) 
+      {
+      letter_Count += 1;
+      }
+  }
+  return letter_Count;
+}
+
+    //Task 25
+    function calculate_age(dob) { 
+    var diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
+
+    //Task 26
+     function lifetimeSupply(age, numPerDay) {
+  var maxAge = 100;
+  var totalNeeded = (numPerDay * 365) * (maxAge - age);
+  var message = 'You will need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge;
+  console.log(message);
+}
+
+    //Task 27
+    
+function circle(radius)
+{
+  
+      var area = function () 
+    {
+        return Math.PI * radius * radius;
+    };
+      var perimeter = function ()
+    {
+        return 2*Math.PI*radius;
+    };
+}
+
+    //Task 28
+    function converttoCelcius(degree) {
+  var x;
+  if (degree == "C") {
+    x = document.getElementById("c").value * 9 / 5 + 32;
+    document.getElementById("f").value = Math.round(x);
+  } else {
+    x = (document.getElementById("f").value -32) * 5 / 9;
+    document.getElementById("c").value = Math.round(x);
+  }
+}
+
+    //Task 29
+    function ConverttoFarenhiet(f) {
+  return (5/9) * (f-32);
+}
+    </script>
+    
+</body>
+</html>
