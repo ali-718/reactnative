@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</head>
+  <body>
+    <center>
+    <div class="col-6">
+        <img src="careem (1).jpg" height="200px">
+        <h1>Find your Ride</h1>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Mobile no.</label>
+          <input type="text" class="form-control" id="mobile">
+        </div>
+        <div class="form-group">
+            <select name="select" id="select">
+                <option value="saddar">Saddar</option>
+                <option value="Gulshan">Gulshan</option>
+                <option value="PECHS">PECHS</option>
+                <option value="Garden">Garden</option>
+            </select>
+          </div>
+        <button type="submit" onclick="delme()" class="btn btn-primary">Submit</button>
+    
+      </div>
+
+</center>
+    <script>
+    
+    var userDetail = new Map();     
+    var captain = [
+        ["Hamza Jawed","0300-2342211",26],
+        ["Zafar Ali","0345-2216721",76],
+        ["Kanwar Ahad","0300-2567991",102],
+        ["Muhammad Kamran","090078601",90],
+        ["Usama akram","0300-2334678",52],
+        ["Ali Zaidi","0306-2888745",29],
+    ];
+    
+ var captainDetails = captain[Math.ceil(Math.random()*4)]
+    
+        function delme() {
+            userDetail.set("name",document.getElementById("name").value);
+            userDetail.set("mobile",document.getElementById("mobile").value);
+            userDetail.set("select",document.getElementById("select").value);
+
+document.write("<center><div class='col-6'><h1>Your Details</h1><br><h3>Name: "+userDetail.get("name")+"</h3><h3>Mobile: "+userDetail.get("mobile")+"</h3><h3>Location: "+userDetail.get("select")+"</h3><br> <h1>Your Captain Details</h1><br>   <h3>Captain Name: "+captainDetails[0]+"</h3><h3>Captain mobile no.: "+captainDetails[1]+"</h3><h3>Total trips: "+captainDetails[2]+"</h3> </div></center>");
+        }
+
+
+    
+    
+    </script>
+    <!-- Optional JavaScript -->
+   </body>
+</html>
