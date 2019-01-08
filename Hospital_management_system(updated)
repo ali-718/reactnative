@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</head>
+<br>
+  <body>
+    <center>
+            <h1>Hospital Management System</h1><br>
+    <div class="col-5">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Father Name</label>
+            <input type="text" class="form-control" id="fname">
+          </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">CNIC no.</label>
+          <input type="text" class="form-control" id="cnic">
+        </div><br>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Select illness</label>
+            <select name="select" id="select">
+                <option value="Malaria">Malaria</option>
+                <option value="Typhoid">Typhoid</option>
+                <option value="Fever">Fever</option>
+                <option value="Cancer">Cancer</option>
+                <option value="HIV">HIV</option>
+            </select>
+          </div>
+          <div class="form-group">
+                <label for="exampleInputPassword1">Select Payment option</label>
+                  <select name="payment" id="payment">
+                      <option value="Online Payment">Online Payment</option>
+                      <option value="Credit card">Credit card</option>
+                      <option value="Cash">Cash</option>
+                  </select>
+                </div>
+        <button type="submit" onclick="delme()" class="btn btn-primary">Submit</button>
+    
+      </div>
+
+</center>
+    <script>
+    
+    var barcode1 = Math.floor((Math.random() * 10) + 1);
+    var barcode2 = Math.floor((Math.random() * 10) + 3);
+    var barcode3 = Math.floor((Math.random() * 10) + 6);
+    var barcode4 = Math.floor((Math.random() * 10) + 2);
+
+    var userDetail = new Map();     
+    var Doctor = [
+        ["Hamza Jawed",2,2600],
+        ["Zafar Ali",1,76000],
+        ["Kanwar Ahad",3,102000],
+        ["Muhammad Kamran",4,90000],
+        ["Usama akram",5,52000],
+        ["Ali Zaidi",6,29000],
+    ];
+    
+ var captainDetails = Doctor[Math.ceil(Math.random()*4)]
+    
+        function delme() {
+            userDetail.set("name",document.getElementById("name").value);
+            userDetail.set("fname",document.getElementById("fname").value);
+            userDetail.set("cnic",document.getElementById("cnic").value);
+            userDetail.set("select",document.getElementById("select").value);
+            userDetail.set("payment",document.getElementById("payment").value);
+
+document.write("<center><div class='col-6'><h1>Your Bill</h1><br><h3>Name: "+userDetail.get("name")+"</h3><h3>Father Name: "+userDetail.get("fname")+"</h3><h3>CNIC: "+userDetail.get("cnic")+"</h3><h3>Illness: "+userDetail.get("select")+"</h3><h3>Mr no.: "+barcode1+barcode2+barcode3+barcode4+"</h3><h3>Payment Method: "+userDetail.get("payment")+"</h3><h3>Doctor Name: "+captainDetails[0]+"</h3><h3>Ward No.: "+captainDetails[1]+"</h3><h3>Total Cost: "+captainDetails[2]+"</h3> </div></center>");
+        }
+
+
+    
+    
+    </script>
+    <!-- Optional JavaScript -->
+   </body>
+</html>
