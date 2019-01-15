@@ -1,0 +1,147 @@
+!<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <center>
+        <h1>Hotel Management System</h1><br>
+    </center>
+    <div class="row">
+    <div class="col-3"></div>
+<div class="col-5">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Pakistani Cuisine</label>
+        <select name="select" id="pakistani">
+            <option value="NULL">Select</option>
+            <option value="Chicken Biryani">Chicen Biryani</option>
+            <option value="Chicken Tikka">Chicken Tikka</option>
+            <option value="Chicken Pulao">Chicken Pulao</option>
+            <option value="Chicken Nihari">Chicken Nihari</option>
+            <option value="Beef Biryani">Beef Biryani</option>
+            <option value="Chicken Haleem">Chicken Haleem</option>
+            <option value="Beef Haleem">Beef Haleem</option>
+            <option value="Behari kabab">Behari kabab</option>
+            <option value="Chicken Seekh Kabab">Chicken Seekh Kabab</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Chinese Dishes</label>
+          <select name="select" id="chinese">
+                <option value="NULL">Select</option>
+              <option value="Chicken Chowmein">Chicken Chowmein</option>
+              <option value="Pasta Alfredo">Pasta Alfredo</option>
+              <option value="Chicken Jalfrazzi">Chicken Jalfrazzi</option>
+              <option value="Chicken Manchorian">Chicken Manchorian</option>
+              <option value="Chicken Corn Soup">Chicken Corn Soup</option>
+              <option value="Chicken Tomato Soup">Chicken Tomato Soup</option>
+          </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Refreshment</label>
+              <select name="select" id="refreshment">
+                    <option value="NULL">Select</option>
+                  <option value="Tea">Tea</option>
+                  <option value="Fruit Cake">Fruit Cake</option>
+                  <option value="Chocolate Cookies">Chocolate Cookies</option>
+                  <option value="Mineral Water">Mineral Water</option>
+              </select>
+            </div>
+      <div class="form-group">
+            <label for="exampleInputPassword1">Select Payment option</label>
+              <select name="payment" id="payment">
+                  <option value="Online Payment">Online Payment</option>
+                  <option value="Credit card">Credit card</option>
+                  <option value="Cash">Cash</option>
+              </select>
+            </div>
+    <button type="submit" onclick="delme()" class="btn btn-primary">Submit</button>
+
+  </div>
+  </div>
+
+    <script>
+    
+    
+        var name = document.getElementById('name').value;
+        var pakistani = document.getElementById('pakistani').value;
+        var chinese = document.getElementById('chinese').value;
+        var refrehment = document.getElementById('refreshment').value;
+        var payment = document.getElementById('payment').value;
+        var userdetail = new Map();
+
+        var pakistaniPrice = {
+        "Chicken Biryani":120,
+        "Chicken Tikka":180,
+        "Chicken Pulao":130,
+        "Chicken Nihari":160,
+        "Beef Biryani":170,
+        "Chicken Haleem":130,
+        "Beef Haleem":220,
+        "Behari Kabab":180,
+        "Chicken Seekh Kabab":110,
+        };
+
+        var chinesePrice = {
+            "Chicken Chowmein":250,
+            "Pasta Alfredo":180,
+            "Chicken Jalfrazzi":230,
+            "Chicken Manchorian":300,
+            "Chicken Corn Soup":60,
+            "Chicken Tomato Soup":90,
+        };
+
+        var refreshmentPrice = {
+            "Tea":25,
+            "Fruit Cake":20,
+            "Chocolate Cookies":15,
+            "Mineral Water":20,
+        };
+
+function delme(){
+    userdetail.set('name',document.getElementById('name').value);
+    userdetail.set('pakistani', document.getElementById('pakistani').value);
+    userdetail.set('chinese',document.getElementById('chinese').value);
+    userdetail.set('refreshment',document.getElementById('refreshment').value);
+    userdetail.set('payment',document.getElementById('payment').value);
+
+    var priceRefreshment = refreshmentPrice[userdetail.get("refreshment")];
+    var pricePakistani = pakistaniPrice[userdetail.get("pakistani")];
+    var priceChinese = chinesePrice[userdetail.get("chinese")];
+
+    if (priceRefreshment == null) {
+        priceRefreshment = 0;
+    }
+    if (pricePakistani == null) {
+        pricePakistani  = 0;
+    }
+    if (priceChinese == null) {
+        priceChinese = 0;
+    }
+
+    var totalBill = priceChinese+pricePakistani+priceRefreshment;
+
+    document.write("<center><div class='col-6'><h1>Your Bill</h1><br><h3>Name: "+userdetail.get("name")+"</h3><h3>Pakistani dish: "+userdetail.get("pakistani")+"</h3> Price: "+pricePakistani+"<h3>Chinese dish: "+userdetail.get("chinese")+"</h3> Price: "+priceChinese+"</h3><h3>Starter dish: "+userdetail.get("refreshment")+"</h3> Price: "+priceRefreshment+"</h3><h3>Payment Method: "+userdetail.get("payment")+"</h3><h1 style='color:green;'>Total Bill: "+totalBill+"</h1>");
+}
+    </script>
+    
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
