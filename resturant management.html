@@ -73,7 +73,8 @@
 
     <script>
     
-    
+    class Data{
+        constructor(){
         var name = document.getElementById('name').value;
         var pakistani = document.getElementById('pakistani').value;
         var chinese = document.getElementById('chinese').value;
@@ -109,7 +110,6 @@
             "Mineral Water":20,
         };
 
-function delme(){
     userdetail.set('name',document.getElementById('name').value);
     userdetail.set('pakistani', document.getElementById('pakistani').value);
     userdetail.set('chinese',document.getElementById('chinese').value);
@@ -134,6 +134,11 @@ function delme(){
 
     document.write("<center><div class='col-6'><h1>Your Bill</h1><br><h3>Name: "+userdetail.get("name")+"</h3><h3>Pakistani dish: "+userdetail.get("pakistani")+"</h3> Price: "+pricePakistani+"<h3>Chinese dish: "+userdetail.get("chinese")+"</h3> Price: "+priceChinese+"</h3><h3>Starter dish: "+userdetail.get("refreshment")+"</h3> Price: "+priceRefreshment+"</h3><h3>Payment Method: "+userdetail.get("payment")+"</h3><h1 style='color:green;'>Total Bill: "+totalBill+"</h1>");
 }
+    }
+
+    function delme(){
+        var obj = new Data();
+    }
     </script>
     
     
